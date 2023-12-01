@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog App</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <h1>Blog App</h1>
-    <ul>
+    <h1>Blog</h1>
+    <p>Jednoduchý blog, kde můžete postovat článek.</p>
+    <hr>
+    <div>
         <% blogPosts.forEach(post => { %>
-            <li>
+            <div class="post">
                 <h2><%= post.title %></h2>
                 <p><%= post.content %></p>
-            </li>
+            </div>
         <% }); %>
-    </ul>
-    <a href="/new">Create a New Blog Post</a>
+    </div>
+    <a href="/new">Vytvořit nový příspěvek</a>
 </body>
 </html>
-
